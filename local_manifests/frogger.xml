@@ -2,7 +2,7 @@
 <!-- Nothing Phone (4a) "frogger" on LineageOS 23.2.
      Copy to .repo/local_manifests/ in a lineage-23.2 checkout, then repo sync. -->
 <manifest>
-    <remote name="frogger" fetch="https://github.com/@GHUSER@/" />
+    <remote name="frogger" fetch="https://github.com/justjoshin78/" />
     <remote name="froggerspace" fetch="https://github.com/FroggerSpace/" />
 
     <!-- LineageOS repos carrying frogger changes -->

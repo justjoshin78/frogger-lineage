@@ -49,7 +49,7 @@ You need about 400 GB of disk space and at least 32 GB of RAM.
 ```bash
 mkdir lineage-23.2 && cd lineage-23.2
 repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs
-git clone https://github.com/@GHUSER@/frogger-lineage ../frogger-lineage
+git clone https://github.com/justjoshin78/frogger-lineage ../frogger-lineage
 mkdir -p .repo/local_manifests
 cp ../frogger-lineage/local_manifests/frogger.xml .repo/local_manifests/
 repo sync -c -j8
