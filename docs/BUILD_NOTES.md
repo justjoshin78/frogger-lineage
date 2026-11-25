@@ -8,7 +8,7 @@ Steps 1–5 are done. `out/target/product/frogger/lineage-23.2-20261120-UNOFFICI
 
 All 757 modules listed in `modules.load.*` are present in their images. The OTA also flashes **C5.0 firmware** (abl, xbl, tz, modem, etc.), the same version that's on the phone now.
 
-These are local commits on branch `frogger-23.2` in each FroggerSpace repo. Nothing is pushed.
+These are commits on branch `frogger-23.2` in each changed repo, pushed (2026-11-25) to public forks under github.com/justjoshin78; the manifest, patches and releases are in github.com/justjoshin78/frogger-lineage (local copy `frogger-lineage/`).
 
 | Repo | Commit | Change |
 |---|---|---|
