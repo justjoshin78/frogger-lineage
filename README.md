@@ -4,7 +4,7 @@ An unofficial LineageOS 23.2 (Android 16) build for the Nothing Phone (4a), SM76
 It's based on the [FroggerSpace](https://github.com/FroggerSpace) lineage-24.0 trees,
 backported to 23.2.
 
-Prebuilt zips are on the [Releases](../../releases) page.
+Prebuilt zips and the matching `recovery.img` are on the [Releases](../../releases) page.
 
 ## Status
 
@@ -96,8 +96,12 @@ Host notes:
 The zip also flashes the stock **C5.0** firmware (abl, xbl, tz, modem, …).
 
 1. Unlock the bootloader.
-2. Flash LineageOS recovery.
-3. Run `adb reboot sideload`, then `adb sideload lineage-23.2-…-frogger.zip`.
+2. Download `recovery.img` from the same release as the zip, and flash it from the bootloader:
+   `fastboot flash recovery recovery.img`. The image has no kernel of its own and uses the one in `boot`.
+3. Boot into recovery: `fastboot reboot recovery`. Or power off, then hold Power and Volume Up.
+4. In recovery, choose **Apply update → Apply from ADB**, then run `adb sideload lineage-23.2-…-frogger.zip`.
+
+Flashing the zip also updates LineageOS recovery, so step 2 is only needed once.
 
 Release-zip signing:
 - The release zips are signed with this project's own key.
