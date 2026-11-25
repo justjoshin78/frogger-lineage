@@ -1,0 +1,13 @@
+diff --git i/ipacm/Android.bp w/ipacm/Android.bp
+index cf38e4a2..9764064c 100644
+--- i/ipacm/Android.bp
++++ w/ipacm/Android.bp
+@@ -4,7 +4,7 @@ cc_binary {
+ 
+     local_include_dirs: ["src"] + ["inc"],
+     header_libs: ["device_kernel_headers"]+["qti_kernel_headers",
+-	"libutils_headers", "libcutils_headers"]+["qti_ipa_kernel_headers"],
++	"libutils_headers", "libcutils_headers"]+["qti_ipa_kernel_headers_caf"],
+ 
+     cflags: ["-DFEATURE_IPA_ANDROID"] + ["-DFEATURE_IPACM_RESTART"] + [
+         "-DFEATURE_IPACM_AIDL",

@@ -1,0 +1,13 @@
+diff --git i/ipanat/Android.bp w/ipanat/Android.bp
+index 732549d3..3beea9b9 100644
+--- i/ipanat/Android.bp
++++ w/ipanat/Android.bp
+@@ -1,7 +1,7 @@
+ cc_library_shared {
+     name: "libipanat",
+ 
+-    header_libs: ["device_kernel_headers"]+["qti_kernel_headers"]+["qti_ipa_kernel_headers"],
++    header_libs: ["device_kernel_headers"]+["qti_kernel_headers"]+["qti_ipa_kernel_headers_caf"],
+ 
+     srcs: [
+         "src/ipa_nat_map.cpp",

@@ -1,0 +1,13 @@
+diff --git i/Android.bp w/Android.bp
+index a45aa86..85c644b 100644
+--- i/Android.bp
++++ w/Android.bp
+@@ -19,7 +19,7 @@ cc_library_headers {
+ }
+ 
+ cc_library_headers {
+-    name: "qti_ipa_kernel_headers",
++    name: "qti_ipa_kernel_headers_caf",
+     defaults: ["generated_kernel_header_defaults"],
+ }
+ 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nothing Phone (4a) "frogger" on LineageOS 23.2.
+     Copy to .repo/local_manifests/ in a lineage-23.2 checkout, then repo sync. -->
+<manifest>
+    <remote name="frogger" fetch="https://github.com/@GHUSER@/" />
+    <remote name="froggerspace" fetch="https://github.com/FroggerSpace/" />
+
+    <!-- LineageOS repos carrying frogger changes -->
+    <remove-project name="LineageOS/android_frameworks_base" />
+    <project path="frameworks/base" name="android_frameworks_base" remote="frogger" revision="frogger-23.2" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+    <remove-project name="LineageOS/android_packages_apps_Settings" />
+    <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="frogger" revision="frogger-23.2" groups="pdk-cw-tvc,pdk-fs,sysui-studio" />
+
+    <!-- Device, kernel, hardware and vendor trees (FroggerSpace forks, backported to 23.2) -->
+    <project path="device/nothing/frogger"            name="android_device_nothing_frogger"            remote="frogger" revision="frogger-23.2" />
+    <project path="kernel/nothing/sm7635"             name="android_kernel_nothing_sm7635"             remote="frogger" revision="frogger-23.2" />
+    <project path="kernel/nothing/sm7635-modules"     name="android_kernel_nothing_sm7635-modules"     remote="frogger" revision="frogger-23.2" />
+    <project path="vendor/nothing/frogger"            name="proprietary_vendor_nothing_frogger"        remote="frogger" revision="frogger-23.2" />
+    <project path="hardware/nothing"                  name="android_hardware_nothing"                  remote="frogger" revision="frogger-23.2" />
+
+    <!-- Unchanged; pinned to the commit the ROM was built with -->
+    <project path="kernel/nothing/sm7635-devicetrees" name="android_kernel_nothing_sm7635-devicetrees" remote="froggerspace" revision="571af3c1ea9921cf26123badadb9655a38e0f166" />
+</manifest>
